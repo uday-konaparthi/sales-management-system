@@ -16,7 +16,7 @@ const { dbConnection } = require('./config/db');
 const app = express();
 
 const corsOptions = {
-  origin: ['https://sales-management-system-backend-q6he.onrender.com'],
+  origin: ['https://sales-management-system-lac.vercel.app'],
   optionsSuccessStatus: 200, 
   credentials: true 
 };
