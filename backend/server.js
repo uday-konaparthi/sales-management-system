@@ -16,7 +16,7 @@ const { dbConnection } = require('./config/db');
 const app = express();
 
 const corsOptions = {
-  origin: ['http://localhost:5173'],
+  origin: ['https://sales-management-system-backend-q6he.onrender.com'],
   optionsSuccessStatus: 200, 
   credentials: true 
 };
