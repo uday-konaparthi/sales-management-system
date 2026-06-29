@@ -111,10 +111,17 @@ exports.login = async (req, res, next) => {
       { expiresIn: "7d" }
     );
 
-    res.cookie("token", token, {
+    /*res.cookie("token", token, {
       httpOnly: true,
       secure: process.env.NODE_ENV === "production",
       sameSite: process.env.NODE_ENV === "production" ? "none" : "lax",
+      maxAge: 7 * 24 * 60 * 60 * 1000,
+    });*/
+
+    res.cookie("token", token, {
+      httpOnly: true,
+      secure: true,
+      sameSite: "none",
       maxAge: 7 * 24 * 60 * 60 * 1000,
     });
 
@@ -209,10 +216,15 @@ exports.autoLogin = async (req, res, next) => {
 
 // Logout: Clear the cookie
 exports.logout = async (req, res) => {
-  res.clearCookie("token", {
+  /*res.clearCookie("token", {
     httpOnly: true,
     secure: process.env.NODE_ENV === "production",
     sameSite: process.env.NODE_ENV === "production" ? "none" : "lax",
-  });
+  });*/
+  res.clearCookie("token", {
+  httpOnly: true,
+  secure: true,
+  sameSite: "none",
+});
   res.json({ message: 'Logged out successfully' });
 };
