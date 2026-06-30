@@ -239,24 +239,24 @@ export default function SalesPage() {
 
         {showScanner ?
           (<div>
-            <h1 className="text-xs font-bold dark:text-gray-400 px-5 mb-2 flex gap-3 items-center justify-between ">
+            {/*<h1 className="text-xs font-bold dark:text-gray-400 px-5 mb-2 flex gap-3 items-center justify-between ">
               Upload Barcode Image
               <X className='size-5 text-red-400 hover:scale-120 cursor-pointer' onClick={() => setShowScanner(false)} />
             </h1>
             <div className="flex justify-center items-center gap-3 w-55">
               <UploadBarCode />
-            </div>
+            </div>*/
             <div className="flex justify-center items-center gap-3 w-full">
               <BarcodeInput ref={barcodeInputRef} />
             </div>
           </div>)
           : (
             <div className='flex gap-2 flex-col items-center'>
-              <button className='flex gap-3 items-center justify-center cursor-pointer px-6 py-1.5 bg-indigo-600 hover:bg-indigo-700 transition-colors text-lg font-semibold rounded text-white'
+              {/*<button className='flex gap-3 items-center justify-center cursor-pointer px-6 py-1.5 bg-indigo-600 hover:bg-indigo-700 transition-colors text-lg font-semibold rounded text-white'
                 onClick={() => setShowScanner(true)}>
                 <ScanBarcodeIcon />
                 Manual Scan
-              </button>
+              </button>*/} 
               <div className="flex justify-center items-center gap-3 ">
                 <BarcodeInput ref={barcodeInputRef} />
               </div>
