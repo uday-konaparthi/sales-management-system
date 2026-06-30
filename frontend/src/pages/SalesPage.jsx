@@ -245,7 +245,7 @@ export default function SalesPage() {
             </h1>
             <div className="flex justify-center items-center gap-3 w-55">
               <UploadBarCode />
-            </div>*/
+            </div>*/} 
             <div className="flex justify-center items-center gap-3 w-full">
               <BarcodeInput ref={barcodeInputRef} />
             </div>
